@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Мастер-классы</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/font-awesome.css">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="./css/card.css">
+      <link rel="stylesheet" href="css/media.css">
+      <link rel="stylesheet" href="css/lightgallery.css">
+   </head>
+<body>
+    <div class="wrapper">
+        <!-- "Хедер" сайта -->
+        <header class="header">
+           <div class="upper-header"> <!--эта часть делает лучше верхнюю часть меню-->
+           <div class="center"> <!--центрирует верхнюю менюшку-->
+                 <div class="upper-header__content"> <!-- это штука позиционирует кнопки поиска и аккаунта-->
+                       <span class="site-title"><a href="./formasters.html">Для мастеров Северодвинска </a> <span>&nbsp;—&nbsp;путеводитель по народному творчеству</span></span>
+                 </div>
+           </div>
+           </div>
+
+           <nav class="header-nav">
+           <input type="checkbox" name="toggle" id="menu" class="menu-toggle"> <!--Эта штука для телефонов-->
+           <label for="menu" class="menu-toggle"><i class="fa fa-bars"></i>Меню</label> <!--Эта штука для телефонов-->
+           <ul class="header-list">
+              <li class="header-item">
+                 <a href="top.html">Виды ремёсел</a>
+              </li>
+              <li class="header-item">
+                 <a href="./masters.html">Мастера</a>
+              </li>
+              <li class="header-item">
+                 <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m2">
+                 <a href="#">мастер-классы</a>
+                 <label for="sub_m2" class="toggleSubmenu"><i class="fa"></i></label>
+                 <ul>
+                       <li><a href="./online.html"><i class="fa fa-solid fa-globe"></i>&nbsp;ОНЛАЙН</a></li>
+                       <li><a href="./offline.html"><i class="fa fa-calendar"></i></i>&nbsp;ВЖИВУЮ</a></li>
+                 </ul>
+              </li>
+              <li class="header-item">
+                 <a href="./events.html">Мероприятия</a>
+              </li>
+              <li class="header-item">
+                 <a href="./education.html">Обучение</a>
+              </li>
+              <li class="header-item user">
+                 <a href="#" title="Поиск по сайту"><i class="fa fa-search" aria-hidden="true"></i></a>
+                 <a href="login.html" title="Об авторе"><i class="fa fa-user" aria-hidden="true"></i></a>
+              </li>
+           </ul>
+           </nav>
+        </header>
+    </div>
+        <footer class="footer">
+            <div class="upper-footer">
+               <div class="center">                  
+                  <a class="footer-title" href="./index.html">Мастера Северодвинска</a>
+                  <div class="footer-login">
+                     <ul class="footer-list">
+                        <li class="footer-item"><a href="mailto:evil-corporaty@yandex.ru" class="footer-link">evil-corporaty@yandex.ru</a></li>
+                        <li class="footer-item"><a href="tel:79116562686" class="footer-link">+7 (911) 656-26-86</a></li>
+                     </ul>
+
+                  </div>
+               </div>
+            </div>
+        </footer>
+    
+   <!--
+   
+   <script src="js/mixitup.min.js"></script>
+   <script src="js/main.js" defer></script>
+   <script src="js/card.js" defer></script>
+   <script>
+      var mixer = mixitup(".types__row");
+   </script>
+   <script src="js/lightgallery.umd.js"></script>
+   <script type="text/javascript">
+      lightGallery(document.getElementById('lightgallery'));
+      lightGallery(document.getElementById('lightgallery1'));
+      lightGallery(document.getElementById('lightgallery2'));
+      lightGallery(document.getElementById('lightgallery3'));
+      lightGallery(document.getElementById('lightgallery4'));
+      lightGallery(document.getElementById('lightgallery5'));
+      lightGallery(document.getElementById('lightgallery6'));
+      lightGallery(document.getElementById('lightgallery7'));
+      lightGallery(document.getElementById('lightgallery8'));
+      lightGallery(document.getElementById('lightgallery9'));
+      lightGallery(document.getElementById('lightgallery10'));
+      lightGallery(document.getElementById('lightgallery11'));
+      lightGallery(document.getElementById('lightgallery12'));
+      lightGallery(document.getElementById('lightgallery13'));
+   </script>
+   -->
+   <!-- Подключение скриптов -->
+   <script src="js/timetable.js"></script>
+   <script src="js/copy.js"></script>
+   <script src="js/mixitup.min.js"></script>
+   <script src="js/main.js" defer></script>
+   <script src="js/card.js" defer></script>
+   <script>      
+      var mixer = mixitup(".master-class__body");
+   </script>
+</body>
+</html>

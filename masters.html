@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Мастера Северодвинска</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:regular,700" rel="stylesheet" />
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="./css/card.css">
+        <link rel="stylesheet" href="css/media.css">
+        <link rel="stylesheet" href="css/lightgallery.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- "Хедер" сайта -->
+        <header class="header">
+            <div class="upper-header"> <!--эта часть делает лучше верхнюю часть меню-->
+            <div class="center"> <!--центрирует верхнюю менюшку-->
+                    <div class="upper-header__content"> <!-- это штука позиционирует кнопки поиска и аккаунта-->
+                        <span class="site-title"><a href="./index.html">Мастера Северодвинска </a> <span>&nbsp;—&nbsp;путеводитель по народному творчеству</span></span>
+                    </div>
+            </div>
+            </div>
+
+            <nav class="header-nav">
+            <input type="checkbox" name="toggle" id="menu" class="menu-toggle"> <!--Эта штука для телефонов-->
+            <label for="menu" class="menu-toggle"><i class="fa fa-bars"></i>Меню</label> <!--Эта штука для телефонов-->
+            <ul class="header-list">
+                <li class="header-item">
+                    <a href="top.html">Виды ремёсел</a>
+                </li>
+                <li class="header-item">
+                    <a href="./masters.html">Мастера</a>
+                </li>
+                <li class="header-item">
+                    <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m2">
+                    <a href="#">мастер-классы</a>
+                    <label for="sub_m2" class="toggleSubmenu"><i class="fa"></i></label>
+                    <ul>
+                        <li><a href="./online.html"><i class="fa fa-solid fa-globe"></i>&nbsp;ОНЛАЙН</a></li>
+                        <li><a href="./offline.html"><i class="fa fa-calendar"></i></i>&nbsp;ОФФЛАЙН</a></li>
+                    </ul>
+                </li>
+                <li class="header-item">
+                    <a href="./events.html">Мероприятия</a>
+                </li>
+                <li class="header-item">
+                    <a href="./education.html">Сувенирные лавки</a>
+                </li>
+                <li class="header-item user">
+                    <!--
+                    <a href="#" title="Поиск по сайту"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    <a href="login.html" title="Об авторе"><i class="fa fa-user" aria-hidden="true"></i></a>
+                    -->
+                </li>
+            </ul>
+            </nav>
+        </header>
+        <!--Карточки мастеров-->
+        <section class="card-section">
+            <div class="center">
+                <div class="masters">
+                    <h1 class="masters__title title">Мастера Северодвинска</h1>
+                    <!--Фильтры мастеров-->
+                    <div class="types__filters">
+                        <h2 class="filters__title">Направления:</h2>
+                        <button type="button" class="types__button" data-filter="all">Все направления</button>
+                        <button type="button" class="types__button" data-filter=".felted-toy">Валяная игрушка</button>
+                        <button type="button" class="types__button" data-filter=".patchwork-painting">Лоскутная живопись</button>
+                        <button type="button" class="types__button" data-filter=".patchwork">Лоскутая шитье</button>
+                        <button type="button" class="types__button" data-filter=".folk-doll">Народная кукла</button>
+                    </div>
+                    <!--Все мастера-->
+                    <div class="masters__row">
+                        <!--Балабанова Ирина-->
+                        <a href="#popup" id="mr-1" class="block felted-toy mix popup-link">
+                            <h2 class="block__title">Балабанова Ирина</h2>
+
+                            <div class="block__info">
+                                <p>Направление: <span>валяная игрушка</span></p>
+                                <p>
+                                    <i class="fa fa-phone" aria-hidden="true"></i>+7(911)656-26-86
+                                </p>
+                                <p>
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>evil-corporaty@yandex.ru
+                                </p>
+                            </div>
+                        </a>
+                        <div id="popup" class="popup">
+                            <div class="popup__body">
+                                <div class="popup__content">
+                                    <div class="popup__header">
+                                        <h1 class="popup__title">Балабанова Ирина Алексеевна</h1>
+                                        <a href="#" class="popup__close close-popup">
+                                            <img src="img/icons/cross.svg" alt="Закрыть модальное окно">
+                                        </a>
+                                    </div>
+                                    <div class="popup__middle">
+                                        <div class="popup__info"> 
+                                            <p>
+                                                Место работы: с 1995 педагог дополнительного образования МАОУДО «Северодвинский детский технопарк «Северный Кванториум». Работает в должности 25 лет, имеет высшую категорию педагога дополнительного образования. Занимается с детьми школьного возраста ткачеством (пояса, шарфы, сумочки), валянием шерсти (валенки, игрушки, фрукты), биссероплетением (браслеты, цветы, бижутерия), а также вязанием крючком (шаль, вязанка), гобеленом.
+                                            </p>
+                                            <p>
+                                                Принимала участие во многих региональных, городских форумах, фестивалях, конкурсах, выставках прикладных ремёсел и промыслов, декоративно-прикладного искусства. Постоянный участник городского открытого фестиваля северных ремёсел и промыслов «Чудесный короб»; выставки «Коллекция-2000, … 2019 г.; в городской выставке "Творение рук - души творение" многих лет; в 4 региональной выставке-конкурсе народной игрушки "Русские потешки" и т.д. На Всероссийской выставке-ярмарке народных промыслов «Ладья-2009» выставляла сувенирные валеночки и пояса.
+                                            </p>   
+                                        </div>
+                                        <div id="pi-1" class="popup__img"></div>
+                                    </div>
+                                    <div class="popup__info">
+                                        <h2 class="popup__header">Контакты:</h2>
+                                        <p style="padding-bottom: 20px;">
+                                            <i class="fa fa-phone" aria-hidden="true" style="padding-right: 20px;"></i>+7(911)656-26-86
+                                        </p>
+                                        <p>
+                                            <i class="fa fa-envelope-o" style="padding-right: 16px;"></i>evil-corporaty@yandex.ru
+                                        </p>
+                                    </div>
+                                    <div class="popup__footer">
+                                        <h2 class="popup__header">Работы мастера:</h2>
+                                        <div id="lightgallery" class="gallery-light">
+                                           <a class="lightgallery__item" href="img/balabanova/work-1.webp">
+                                              <img alt="Валяные игрушки" src="img/balabanova/work-1.webp" />
+                                           </a>
+                                           <a class="lightgallery__item" href="img/balabanova/work-2.webp">
+                                              <img alt="Валяные игрушки" src="img/balabanova/work-2.webp" />
+                                           </a>
+                                           <a class="lightgallery__item" href="img/balabanova/work-3.webp">
+                                              <img alt="Валяные игрушки" src="img/balabanova/work-3.webp" />
+                                           </a>
+                                           <a class="lightgallery__item" href="img/balabanova/work-4.webp">
+                                              <img alt="Валяные игрушки" src="img/balabanova/work-4.webp" />
+                                           </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Гордон Елена-->
+                        <a href="#popup-2" id="mr-2" class="block patchwork-painting mix popup-link">
+                        <h2 class="block__title">Гордон Елена</h2>
+                        <div class="block__info">
+                            <p>Направление: <span>лоскутная живопись</span></p>
+                            <p>
+                                <i class="fa fa-phone" aria-hidden="true"></i>+7(911)656-26-86
+                            </p>
+                            <p>
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>evil-corporaty@yandex.ru
+                            </p>
+                        </div>
+                        </a>
+                        <div id="popup-2" class="popup">
+                            <div class="popup__body">
+                                <div class="popup__content">
+                                    <div class="popup__header">
+                                        <h1 class="popup__title">Гордон Елена Ивановна</h1>
+                                        <a href="#" class="popup__close close-popup">
+                                            <img src="img/icons/cross.svg" alt="Закрыть модальное окно">
+                                        </a>
+                                    </div>
+                                    <div class="popup__middle"> 
+                                        <div class="popup__info">
+                                            <p>
+                                                Родилась в г.Алма-Ата Казахской ССР. В 1977 году Елена с родителями переехала в г.Северодвинск Архангельской области, где окончила среднюю школу в 1988 году. С 1988 года по 1994 обучалась в Московском институте электронной техники (Техническом университете), по окончании получила квалификацию инженера электронной техники. После института работала на ОАО «ПО «Севмаш», с 1998 года и по настоящее время – в УВД г.Северодвинска (ОМВД России по городу Северодвинску). В 2017 году прошла профессиональную переподготовку в Архангельском педагогическом колледже, получила квалификацию педагога дополнительного образования в области декоративно-прикладного искусства.
+                                            </p>
+                                            <p>
+                                                Обучаясь в школе, на занятиях в УПК, получила квалификацию швеи 2 разряда. Шила одежду для себя и семьи. В 1996 году была участницей конкурса моделей одежды, сшитых по выкройкам «Бурда моден», проходившем в г.Архангельске.
+                                            </p>
+                                            <p>
+                                                В 2011 году начала изучать различные техники машинной стежки: СХМС, «рисование» на швейной машине, «лоскутная живопись». И вот уже несколько лет создание таких работ полностью захватило все свободное время...
+                                            </p>
+                                            <p>
+                                                Весь смысл и суть её творческого процесса - создание гармоничной работы - сочетание цвета, формы, фактуры, каких-то интуитивных пропорций и расстояний, когда нет ничего лишнего, но при этом работа особенна своим духом и настроением.
+                                            </p>
+                                            <p>
+                                                При создании работ используются самые разные материалы: ткань, фетр, шерсть, оттенки цвета помогают передать нитки. Основным материалом является ткань, а СХМС, ЛЖ - основными техниками. 
+                                            </p>
+                                        </div>
+                                        <div id="pi-2" class="popup__img"></div>
+                                    </div>
+                                    <div class="popup__info">
+                                        <h2 class="popup__header">Контакты:</h2>
+                                        <p style="padding-bottom: 20px;">
+                                           <i class="fa fa-phone" aria-hidden="true" style="padding-right: 20px;"></i>+7(911)656-26-86
+                                        </p>
+                                        <p>
+                                           <i class="fa fa-envelope-o" style="padding-right: 16px;"></i>evil-corporaty@yandex.ru
+                                        </p>
+                                    </div>
+                                    <div class="popup__footer">
+                                        <h2 class="popup__header">Работы мастера:</h2>
+                                        <div id="lightgallery1" class="gallery-light">
+                                            <a class="lightgallery__item" href="img/gordon/work-1.webp">
+                                                <img alt='"Маральник. Алтайская весна"' src="img/gordon/work-1.webp" />
+                                            </a>
+                                            <a class="lightgallery__item" href="img/gordon/work-2.webp">
+                                                <img alt='"Янтарная мелодия"' src="img/gordon/work-2.webp" />
+                                            </a>
+                                            <a class="lightgallery__item" href="img/gordon/work-3.webp">
+                                                <img alt='"Лоскутное одеяло"' src="img/gordon/work-3.webp" />
+                                            </a>
+                                            <a class="lightgallery__item" href="img/gordon/work-4.webp">
+                                                <img alt='"Ангел надежды"' src="img/gordon/work-4.webp" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Примакова Наталья-->
+                        <a href="#popup-3" id="mr-3" class="block patchwork mix popup-link">
+                            <h2 class="block__title">Примакова Наталья</h2>
+                            <div class="block__info">
+                                <p>Направление: <span>лоскутное шитьё</span></p>
+                                <p>
+                                    <i class="fa fa-phone" aria-hidden="true"></i>+7(911)656-26-86
+                                </p>
+                                <p>
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>evil-corporaty@yandex.ru
+                                </p>
+                            </div>
+                        </a>
+                        <div id="popup-3" class="popup">
+                            <div class="popup__body">
+                                <div class="popup__content">
+                                    <div class="popup__header">
+                                        <h1 class="popup__title">Примакова Наталья Владимировна</h1>
+                                        <a href="#" class="popup__close close-popup">
+                                           <img src="img/icons/cross.svg" alt="Закрыть модальное окно">
+                                        </a>
+                                    </div>
+                                    <div class="popup__middle"> 
+                                        <div class="popup__info">
+                                            <p>
+                                                По образованию я математик, преподавала в школе, но главная моя работа – быть мамой 5 детей. Долгое время в декрете располагало к занятиям рукоделием и лоскутное шитье переросло в серьезное увлечение.
+                                            </p>
+                                            <p>
+                                                С 2013 года руковожу Мастерской лоскутного шитья «Музыка для глаз» в Православном просветительском центре свв.Кирилла и Мефодия. Участник областных и международных выставок. В нашей мастерской можно научиться не только традиционному лоскутному шитью, но и современным техникам, японскому пэчворку и мастерству свободно-ходовой стежки.
+                                            </p>      
+                                        </div>
+                                        <div id="pi-3" class="popup__img"></div>
+                                    </div>
+                                    <div class="popup__info">
+                                        <h2 class="popup__header">Контакты:</h2>
+                                        <p style="padding-bottom: 20px;">
+                                            <i class="fa fa-phone" aria-hidden="true" style="padding-right: 20px;"></i>+7(911)656-26-86
+                                        </p>
+                                        
+                                        <p>
+                                            <i class="fa fa-envelope-o" style="padding-right: 16px;"></i>evil-corporaty@yandex.ru
+                                        </p>
+                                    </div>
+                                    <div class="popup__footer">
+                                        <h2 class="popup__header">Работы мастера:</h2>
+                                        <div id="lightgallery2" class="gallery-light">
+                                            <a class="lightgallery__item" href="img/primakova/work-1.webp">
+                                                <img alt="Лоскутное шитье" src="img/primakova/work-1.webp" />
+                                            </a>
+                                            <a class="lightgallery__item" href="img/primakova/work-2.webp">
+                                                <img alt="Лоскутное шитье" src="img/primakova/work-2.webp" />
+                                            </a>
+                                            <a class="lightgallery__item" href="img/primakova/work-3.webp">
+                                                <img alt="Лоскутное шитье" src="img/primakova/work-3.webp" />
+                                            </a>
+                                            <a class="lightgallery__item" href="img/primakova/work-4.webp">
+                                                <img alt="Лоскутное шитье" src="img/primakova/work-4.webp" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Савченко Лариса-->
+                        <a href="#popup-4" id="mr-4" class="block folk-doll mix popup-link ">
+                            <h2 class="block__title">Савченко Лариса</h2>
+                            <div class="block__info">
+                                <p>Направление: <span>народная кукла</span></p>
+                                <p>
+                                    <i class="fa fa-phone" aria-hidden="true"></i>+7(911)656-26-86
+                                </p>
+                                <p>
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>evil-corporaty@yandex.ru
+                                </p>
+                            </div>
+                         </a>
+                        <div id="popup-4" class="popup">
+                            <div class="popup__body">
+                                <div class="popup__content">
+                                    <div class="popup__header">
+                                        <h1 class="popup__title">Савченко Лариса Владимировна</h1>
+                                        <a href="#" class="popup__close close-popup">
+                                            <img src="img/icons/cross.svg" alt="Закрыть модальное окно">
+                                        </a>
+                                    </div>
+                                    <div class="popup__middle">
+                                        <div class="popup__info">
+                                            <p>
+                                                Савченко Лариса Владимировна, родилась в г.Северодвинске Архангельской обл. 06.10.1965г.. Образование  закончила в 1986 г. Архангельский коледж культуры и искусства. С 1987г. служба  в звании мичман на Северном флоте в частях Беломорской базы. с 2015г. на пенсии.  В 2013 окончила Северодвинский колледж управления и информационных технологий по специальности Специалист по туризму.
+                                            </p>
+                                            <p>
+                                                2012г., в последующем ежегодное участие. Участие в открытом фестивале северного народного творчества "Чудесный короб" Диплом за творческие достижения и успехи.
+                                            </p>
+                                        </div>
+                                    <div id="pi-4" class="popup__img"></div>
+                                    </div>
+                                    <div class="popup__info">
+                                        <h2 class="popup__header">Контакты:</h2>
+                                        <p style="padding-bottom: 20px;">
+                                            <i class="fa fa-phone" aria-hidden="true" style="padding-right: 20px;"></i>+7(911)656-26-86
+                                        </p>
+                                        
+                                        <p>
+                                            <i class="fa fa-envelope-o" style="padding-right: 16px;"></i>evil-corporaty@yandex.ru
+                                        </p>
+                                    </div>
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!--Торохова Анна-->
+                        <a href="#popup-5" id="mr-5" class="block folk-doll mix popup-link">
+                            <h2 class="block__title">Торохова Анна</h2>
+                            <div class="block__info">
+                                <p>Направление: <span>народная кукла</span></p>
+                                <p>
+                                    <i class="fa fa-phone" aria-hidden="true"></i>+7(911)656-26-86
+                                </p>
+                                <p>
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>evil-corporaty@yandex.ru
+                                </p>
+                            </div>
+                        </a>
+                        <div id="popup-5" class="popup">
+                            <div class="popup__body">
+                                <div class="popup__content">
+                                    <div class="popup__header">
+                                    <h1 class="popup__title">Торохова Анна Александровна</h1>
+                                    <a href="#" class="popup__close close-popup">
+                                        <img src="img/icons/cross.svg" alt="Закрыть модальное окно">
+                                    </a>
+                                    </div>
+                               
+                                    <div class="popup__middle"> 
+                                        <div class="popup__info">
+                                            <p>
+                                                Анна Александровна в октябре 2014 года на общественных началах создала свою Творческую мастерскую народной куклы. В мае 2014 года Творческая мастерская Анны Тороховой вошла в состав вновь организованной Социально ориентированной автономной некоммерческой организации «Творческое объединение «Нёнокоцкая ключёвка».
+                                            </p>
+                                            <p>
+                                                В мастерской занимается 22 человека. Эти люди самых разных профессий. Среди участников Мастерской есть представители разных НКО города, таких как: Лешуконское землячество, Пинежское землячество и др.
+                                            </p>
+                                            <p>
+                                                Под руководством Анны Александровны были созданы коллекции кукол: «Календарь народной куклы», «Брусничное настроение», «Рукодельницы» (2016), «Куклы в костюмах Архангельской области» (2017), «На златом крыльце…» (2018), коллекция кукол в пинежских свадебных нарядах по материалам книги «Куклы играют в свадьбу», коллекция кукол по мотивам сказок Степана Писахова, коллекция кукол  «Дорога к храму» (2019) и многие другие.
+                                            </p>
+                                        </div>
+                                        <div id="pi-5" class="popup__img"></div>
+                                    </div>
+                                    <div class="popup__info">
+                                        <h2 class="popup__header">Контакты:</h2>
+                                        <p style="padding-bottom: 20px;">
+                                            <i class="fa fa-phone" aria-hidden="true" style="padding-right: 20px;"></i>+7(911)656-26-86
+                                        </p>
+                                    
+                                        <p>
+                                            <i class="fa fa-envelope-o" style="padding-right: 16px;"></i>evil-corporaty@yandex.ru
+                                        </p>
+                                    </div>
+                                    <div class="popup__gallery">
+                                    
+                                    </div>
+                                    <div class="popup__footer">
+
+                                    </div> 
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Подвал сайта -->
+         <!-- Подвал сайта -->
+        <footer class="footer">
+            <div class="upper-footer">
+               <div class="center">                  
+                  <a class="footer-title" href="./index.html">Мастера Северодвинска</a>
+                  <div class="footer-login">
+                     <ul class="footer-list">
+                        <li class="footer-item"><a href="mailto:evil-corporaty@yandex.ru" class="footer-link">evil-corporaty@yandex.ru</a></li>
+                        <li class="footer-item"><a href="tel:79116562686" class="footer-link">+7 (911) 656-26-86</a></li>
+                     </ul>
+                     <div class="user-block">
+                        <a href="login.htm"><i class="fa fa-user" aria-hidden="true"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+        </footer>
+        
+    </div>   
+<!-- Подключение скриптов -->
+<script src="js/mixitup.min.js"></script>
+<script src="js/main.js" async></script>
+<script src="js/card.js" defer></script>
+<script src="js/scroll.js"></script>
+<script>      
+    var mixer = mixitup(".masters__row");
+</script>
+<script src="js/lightgallery.umd.js"></script>
+<script type="text/javascript">
+    lightGallery(document.getElementById('lightgallery'));
+    lightGallery(document.getElementById('lightgallery1'));
+    lightGallery(document.getElementById('lightgallery2'));
+    lightGallery(document.getElementById('lightgallery3'));
+    lightGallery(document.getElementById('lightgallery4'));
+</script> 
+
+</body>
+</html>

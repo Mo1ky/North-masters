@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+        <meta charset="UTF-8"><!--Надо для корректного отображения-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Надо для корректного отображения-->
+        <meta name="description" content="Этот сайт — проводник в мир северного творчества. Он ознакомит вас с мастерами прикладного искусства Северодвинска и их работами; культурными центрами и интересными местами Севера, а также поможет в реализации личных задумок.">
+        <title>Мастера Севера</title>
+        <meta property="og:site_name" content="Мастера Севера"> <!--Надо для корректного отображения-->
+        <link rel="shortcut icon" href="my_favicon.ico"> <!--Надо для корректного отображения-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"><!--fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> <!--Надо для корректного отображения-->
+        <link rel="stylesheet" href="css/font-awesome.css"> <!--Меню с поиском и челиком-->
+        <link rel="stylesheet" href="css/normalize.css">  <!--Надо-->
+        <link rel="stylesheet" href="styles.css"> <!--general css-->
+        <link rel="stylesheet" href="css/media.css"> <!--menu buttons-->
+        <link rel="stylesheet" href="css/owl.carousel.min.css"> <!--это что бы картинки на главной стринице были и менялись-->
+        <link rel="stylesheet" href="css/owl.theme.default.min.css"><!--Надо-->
+        <script src="js/jquery-3.6.0.min.js"></script> <!--Эта штука нужна для того что бы работали меняюшиеся картинки-->
+</head>
+
+<body>
+<div class="wrapper">
+    <!-- "Хедер" сайта -->
+    <header class="header">
+            <div class="upper-header"> <!--эта часть делает лучше верхнюю часть меню-->
+            <div class="center"> <!--центрирует верхнюю менюшку-->
+                    <div class="upper-header__content"> <!-- это штука позиционирует кнопки поиска и аккаунта-->
+                        <span class="site-title"><a href="./index.html">Мастера Северодвинска </a> <span>&nbsp;—&nbsp;путеводитель по народному творчеству</span></span>
+                        <div class="user-block">
+                        </div>
+
+                    </div>
+            </div>
+            </div>
+
+            <nav class="header-nav">
+            <input type="checkbox" name="toggle" id="menu" class="menu-toggle"> <!--Эта штука для телефонов-->
+            <label for="menu" class="menu-toggle"><i class="fa fa-bars"></i>Меню</label> <!--Эта штука для телефонов-->
+            <ul class="header-list">
+                <li class="header-item">
+                    <a href="top.html">Виды ремёсел</a>
+                </li>
+                <li class="header-item">
+                    <a href="./masters.html">Мастера</a>
+                </li>
+                <li class="header-item">
+                    <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m2">
+                    <a href="#">мастер-классы</a>
+                    <label for="sub_m2" class="toggleSubmenu"><i class="fa"></i></label>
+                    <ul>
+                        <li><a href="./online.html"><i class="fa fa-solid fa-globe"></i>&nbsp;ОНЛАЙН</a></li>
+                        <li><a href="./offline.html"><i class="fa fa-calendar"></i></i>&nbsp;ОФФЛАЙН</a></li>
+                    </ul>
+                </li>
+                <li class="header-item">
+                    <a href="./events.html">Мероприятия</a>
+                </li>
+                <li class="header-item">
+                    <a href="./education.html">Сувенирные лавки</a>
+                </li>
+                <li class="header-item user">
+                    <!--
+                    <a href="#" title="Поиск по сайту"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    <a href="login.html" title="Об авторе"><i class="fa fa-user" aria-hidden="true"></i></a>
+                    -->
+                </li>
+            </ul>
+            </nav>
+    </header>
+    <!-- Карусель -->
+    <div class="main-carousel-block">
+        <div class="owl-carousel main-carousel">
+            <div class="owl-slide">
+                <img src="img/carousel/3.webp">
+                <a href="./top.html#popup-7" class="owl-slide-text">
+                    Обработка бересты
+                </a>
+            </div>
+            <div class="owl-slide">
+                <img src="img/carousel/6.webp">
+                <a href="./top.html#popup-5" class="owl-slide-text">
+                    Лоскутное шитьё
+                </a>
+            </div>
+            <div class="owl-slide">
+                <img src="img/carousel/7.webp">
+                <a href="./top.html#popup-11" class="owl-slide-text">
+                    Керамика
+                </a>
+            </div>
+            <div class="owl-slide">
+                <img src="img/carousel/8.webp">
+                <a href="./top.html#popup-15" class="owl-slide-text">
+                    Бондарное дело
+                </a>
+            </div>
+            <div class="owl-slide">
+                <img src="img/carousel/5.webp">
+                <a data-href="./top.html#popup-3" href="./top.htm#popup-3" class="owl-slide-text">
+                    Народная игрушка
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--Основная надпись-->
+    <main class="main main-index">
+        <div class="center">
+            <div class="site__greetings">
+               <p class="first">
+                  Добро пожаловать на веб&#8209;ресурс "Мастера&nbsp;Севера"
+               </p>
+               <p>
+                  Этот сайт — проводник в мир северного творчества. Он ознакомит вас с мастерами прикладного искусства Северодвинска и их работами; культурными центрами и интересными местами Севера, а также поможет в реализации личных задумок.
+               </p>
+            </div>
+        </div>
+    </main>
+    <!-- Подвал сайта -->
+    <footer class="footer">
+            <div class="upper-footer">
+               <div class="center">                  
+                  <a class="footer-title" href="./index.html">Мастера Северодвинска</a>
+                  <div class="footer-login">
+                     <ul class="footer-list">
+                        <li class="footer-item"><a href="mailto:evil-corporaty@yandex.ru" class="footer-link">evil-corporaty@yandex.ru</a></li>
+                        <li class="footer-item"><a href="tel:79116562686" class="footer-link">+7 (911) 656-26-86</a></li>
+                     </ul>
+                     <div class="user-block">
+                        <a href="login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+    </footer>
+</div>
+
+    <!-- Подключение скриптов -->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/mainJQ.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/card.js" defer></script>
+
+</body>
+</html>

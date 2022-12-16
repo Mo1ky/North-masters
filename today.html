@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Мастер-классы на завтра</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/font-awesome.css">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="./css/card.css">
+      <link rel="stylesheet" href="css/media.css">
+      <link rel="stylesheet" href="css/lightgallery.css">
+   </head>
+<body>
+    <div class="wrapper">
+        <!-- "Хедер" сайта -->
+        <header class="header">
+           <div class="upper-header"> <!--эта часть делает лучше верхнюю часть меню-->
+           <div class="center"> <!--центрирует верхнюю менюшку-->
+                 <div class="upper-header__content"> <!-- это штука позиционирует кнопки поиска и аккаунта-->
+                       <span class="site-title"><a href="./index.html">Мастера Северодвинска </a> <span>&nbsp;—&nbsp;путеводитель по народному творчеству</span></span>
+                 </div>
+           </div>
+           </div>
+
+           <nav class="header-nav">
+           <input type="checkbox" name="toggle" id="menu" class="menu-toggle"> <!--Эта штука для телефонов-->
+           <label for="menu" class="menu-toggle"><i class="fa fa-bars"></i>Меню</label> <!--Эта штука для телефонов-->
+           <ul class="header-list">
+              <li class="header-item">
+                 <a href="top.html">Виды ремёсел</a>
+              </li>
+              <li class="header-item">
+                 <a href="./masters.html">Мастера</a>
+              </li>
+              <li class="header-item">
+                 <input type="checkbox" name="toggle" class="toggleSubmenu" id="sub_m2">
+                 <a href="#">мастер-классы</a>
+                 <label for="sub_m2" class="toggleSubmenu"><i class="fa"></i></label>
+                 <ul>
+                       <li><a href="./online.html"><i class="fa fa-solid fa-globe"></i>&nbsp;ОНЛАЙН</a></li>
+                       <li><a href="./offline.html"><i class="fa fa-calendar"></i></i>&nbsp;ОФФЛАЙН</a></li>
+                 </ul>
+              </li>
+              <li class="header-item">
+                 <a href="./events.html">Мероприятия</a>
+              </li>
+              <li class="header-item">
+                 <a href="./education.html">Сувенирные лавки</a>
+              </li>
+              <li class="header-item user">
+               <!--
+                 <a href="#" title="Поиск по сайту"><i class="fa fa-search" aria-hidden="true"></i></a>
+                 <a href="login.html" title="Об авторе"><i class="fa fa-user" aria-hidden="true"></i></a>
+               -->
+               </li>
+           </ul>
+           </nav>
+        </header>
+
+        <main class="main">
+           <div class="center">
+              <div class="types">
+                 <h1 class="types__title title">Ближайшие мастер-классы</h1>
+                 <div class="types__filters">
+                    <h2 class="filters__title">Время:</h2>
+                    <nav class="days" aria-label="Выбрать дату проведения">
+                       <ul class="day_selection">
+
+                       <li class="all current"><a href="offline.html" title="Все мастер-классы"><button class="types__button">Все</button></a></li>
+                       <!--Сегодня-->
+                       <li class="today">
+                        <a class="time_block" href="today.html" title="Показать мастер-классы сегодня">
+                          <span id="current_date_time_block" type="button" class="types__button_time"></span>
+                        </a>
+                       </li>
+                       <!--Завтра-->
+                       <li class="tomorrow">
+                          <a class="time_block" href="tomorrow.html" title="Показать мастер-классы завтра">
+                          <span id="current_date_time_block_tomorrow" type="button" class="types__button"></span>
+                       </a>
+                       </li>
+
+                       <li class="week">
+                          <a href="#" title="Показать мастер-классы на этих выходных">
+                          <button type="button" class="types__button">В эти выходные</button></a>
+                       </li>
+
+                       <li class="month">
+                          <a class="time_block" href="#" title="Показать мастер-классы в этом месяце">
+                             <span type="button" class="types__button" id="current_date_time_block_month"></span>
+                       </a>
+                       </li>
+                       <!--
+                       <li class="year"><a href="https://kudamoscow.ru/event/all/2022/" title="Показать мастер-классы в этом году"><button type="button" class="types__button">В этом году</button></a></li>
+                        -->  
+                        <script type="text/javascript">
+                         
+                          /* функция добавления ведущих нулей */
+                          /* (если число меньше десяти, перед числом добавляем ноль) */
+                          function zero_first_format(value)
+                          {
+                             if (value < 10)
+                             {
+                                   value='0'+value;
+                             }
+                             return value;
+                          }
+
+                          /* функция получения текущей даты и времени */
+                          function date_time()
+                          {
+                             var current_datetime = new Date();
+                             var day = zero_first_format(current_datetime.getDate());
+                             var month = zero_first_format(current_datetime.getMonth()+1);
+                             return "Сегодня"+", "+day+"."+month;
+                          }
+
+                          /* функция получения текущей даты и времени */
+                          function date_time_tomorrow()
+                          {
+                             var current_datetime = new Date();
+                             var day = zero_first_format(current_datetime.getDate()+1);
+                             var month = zero_first_format(current_datetime.getMonth()+1);
+                             return "Завтра"+", "+ day+"."+month;
+                          }
+                          function date_time_month()
+                          {
+                             month = new Date().toLocaleString('ru', { month: 'long' });      
+                             return month;
+                          }
+                       
+
+                          document.getElementById('current_date_time_block_month').innerHTML = date_time_month();
+                          /* выводим текущую дату и время на сайт в блок с id "current_date_time_block" */
+                          document.getElementById('current_date_time_block_tomorrow').innerHTML = date_time_tomorrow();
+                          /* выводим текущую дату и время на сайт в блок с id "current_date_time_block" */
+                          document.getElementById('current_date_time_block').innerHTML = date_time();
+                       </script>
+                       </ul>
+                       </nav>
+                 </div>
+                 <div class="types__filters">
+                    <h2 class="filters__title">Виды мастер-класса:</h2>
+                    <button type="button" class="types__button" data-filter="all">Все виды</button>
+                    <button type="button" class="types__button" data-filter=".f-artistic">Художественные</button>
+                    <button type="button" class="types__button" data-filter=".f-intellectual">Интеллектуальные</button>
+                    <button type="button" class="types__button" data-filter=".f-musical">Музыкальные</button>
+                    <button type="button" class="types__button" data-filter=".f-sports">Спортивные</button>
+                    <button type="button" class="types__button" data-filter=".f-culinary">Кулинарные</button>
+                 </div>
+                 
+              </div>
+              <div class="master-class">
+                 <div class="master-class__body">
+                    
+                   <!--ПЕРВЫЙ-->
+                   <div class="master-class__item item-master-class mix f-artistic">
+                     <div class="item-master-class__content">
+                        <h2 class="item-master-class__title">
+                           <a href="#popup-2" class="popup-link item-master-class__link-title">
+                              Творческая студия Алёны Гончаровой
+                           </a>
+                        </h2>
+                  
+                        <div class="item-master-class__text">
+                           Творческая студия Алёны Гончаровой работает по адресу просп. Победы, 44А в Северодвинске. Основные сферы деятельности — это «Тренинги», «Курсы и мастер-классы» и «Школа искусств». График работы: ежедневно 10:00–22:00. Рабочий телефон для связи: +7 (999) 250-68-61.
+                        </div>
+                     </div>
+                     <div class="item-master-class__image">
+                        <img src="img\master_class/goncharova.webp" alt="">
+                     </div>
+                     <div id="popup-2" class="popup">
+                        <div class="popup__body">
+                            <div class="popup__content">
+                                 <div class="popup__header">
+                                    <h1 class="popup__title">Творческая студия Алёны Гончаровой</h1>
+                                    <a href="#" class="popup__close close-popup">
+                                       <img src="img/icons/cross.svg" alt="Закрыть модальное окно">
+                                    </a>
+                                 </div>
+                                 <div class="popup__middle">
+                                    <div class="popup__info">
+                                        <p>
+                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu elit non nulla eleifend convallis vel euismod risus. Pellentesque ut elit ut nunc ultricies porta non vitae metus. Cras a nisl consectetur, cursus magna ac, blandit ex. Aliquam id posuere nibh, quis commodo neque. Quisque non lectus a metus tincidunt tempor. Nam sit amet purus vestibulum, aliquet ante in, dictum odio. Mauris a sollicitudin neque, vitae hendrerit ex. Ut rhoncus odio in ante efficitur mollis. Praesent consequat eu mauris sed congue.
+                                        </p>
+                                        <p>
+                                          In varius eros sit amet elit scelerisque faucibus. Curabitur in consequat orci. Praesent lectus ante, facilisis in leo vitae, auctor tincidunt lorem. Pellentesque suscipit dapibus nunc et venenatis. Duis ac elit et lorem interdum commodo sed nec ligula. Donec sollicitudin, ligula eu lacinia commodo, orci quam suscipit nisi, quis pulvinar justo urna et libero. Morbi vel ex a ipsum mollis posuere. Nulla facilisi. Maecenas non leo sit amet lectus tincidunt rhoncus in ut metus. Donec at tincidunt enim. Duis cursus mi ut turpis faucibus, id rhoncus libero elementum. Integer ultrices malesuada magna, id vulputate nisl. Vivamus pretium lectus eget lectus lacinia efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </p>
+                                    </div>
+                                    <div class="item-master-class__image">
+                                       <img src="img\master_class/goncharova.webp" alt="">
+                                    </div>
+                                 </div>
+
+                                 <div class="popup__info">
+                                    <h2 class="popup__header">Контакты:</h2>
+                                    <table cellspacing="0" id="maket">
+                                       <tr> 
+                                        <td class="leftcol"><i class="fa fa-phone" aria-hidden="true"></td>
+                                        <td class="rightcol"><span class="tooltip" data-title="Скопировать"><div class="section-info">+7 (999) 250-68-61</div></td>
+                                       </tr>
+                                       <tr>
+                                          <td class="leftcol"><i class="fa fa-envelope-o"></i></td>
+                                          <td class="rightcol"><span class="tooltip" data-title="Скопировать"><div class="section-info">evil-corporaty@yandex.ru</div></span></td>
+                                       </tr>
+                                       <tr>
+                                          <td class="leftcol"><i class="fa fa-solid fa-globe"></i></td>
+                                          <td class="rightcol"><a target="_blank" class="item-master-class__link" href="https://vk.com/creative_studio_severodvinsk">Вконтакте</a></td>
+                                       </tr>
+                                      </table>
+                                 </div>
+                                 <div class="popup__info">
+                                    <h2 class="popup__header">Расписание:</h2>
+                                    <div class="sidenav">
+                                       <table cellspacing="0" id="maket">
+                                       <tr>
+                                          <td class="leftcol"><i class="fa fa-clock-o" aria-hidden="true"></i></td> <td class="rightcol"><button class="dropdown-btn">Время работы&nbsp;<i class="fa fa-caret-down"></i></button>
+                                          
+                                          <div class="dropdown-container">
+                                             <table cellspacing="0"class="timetable">
+                                                   <tr>
+                                                   <td class="leftcol">Пн</td><td  class="rightcol">11:00–15:00</td>
+                                                   </tr>
+                                                   <tr>
+                                                   <td class="leftcol">Вт</td><td class="rightcol">11:00–15:00</td>
+                                                   </tr>
+                                                   <tr>
+                                                   <td class="leftcol">Ср</td><td class="rightcol">—</td>
+                                                   </tr>
+                                                   <tr>
+                                                   <td class="leftcol">Чт</td><td class="rightcol">11:00–15:00</td>
+                                                   </tr>
+                                                   <tr>
+                                                   <td class="leftcol">Пт</td><td class="rightcol">—</td>
+                                                   </tr>
+                                                   <tr>
+                                                   <td class="leftcol">Сб</td><td class="rightcol">11:00–15:00</td>
+                                                   </tr>
+                                                   <tr>
+                                                   <td class="leftcol">Вс</td><td class="rightcol">—</td>
+                                                   </tr>
+                                             </table>
+                                          </div>
+                                       </td>
+                                       </tr>
+                                    </table>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="popup__info">
+                                       <h2 class="popup__header">Адрес:</h2>
+                                       <table>
+                                       <tr>
+                                          <td class="leftcol"><i class="fa fa-bandcamp" aria-hidden="true"></i></td>
+                                          <td class="rightcol"><span class="tooltip" data-title="Скопировать"><div class="section-info">​просп. Победы, 44А</div></span></td>
+                                       </tr>
+                                       </table>
+                                       <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/10849/severodvinsk/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Северодвинск</a><a href="https://yandex.ru/maps/10849/severodvinsk/house/prospekt_pobedy_44a/Z0AYfgdoTU0FQFhufXlyeHplYw==/?ll=39.808483%2C64.539667&utm_medium=mapframe&utm_source=maps&z=17.14" style="color:#eee;font-size:12px;position:absolute;top:14px;">Проспект Победы, 44А — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUfZSHktA" width=100% height="300" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+
+                                 </div>
+      
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <!--ВТОРОЙ-->
+                  <div class="master-class__item item-master-class mix f-artistic">
+                     <div class="item-master-class__content">
+                        <h2 class="item-master-class__title">
+                           <a href="#popup-4" class="popup-link item-master-class__link-title">
+                              Кукольный Домик
+                           </a>
+                        </h2>
+                        <div class="item-master-class__text">
+                           Кукольный Домик работает по адресу Морской проспект, 30 в Северодвинске. Основные сферы деятельности — это «Курсы и мастер-классы», «Художественная мастерская» и «Магазин подарков и сувениров».
+                        </div>
+                     </div>
+                     <div class="item-master-class__image">
+                        <img src="img\master_class/Kykol.webp" alt="">
+                     </div>
+                     <div id="popup-4" class="popup">
+                        <div class="popup__body">
+                            <div class="popup__content">
+                                 <div class="popup__header">
+                                    <h1 class="popup__title">Кукольный Домик</h1>
+                                    <a href="#" class="popup__close close-popup">
+                                       <img src="img/icons/cross.svg" alt="Закрыть модальное окно">
+                                    </a>
+                                 </div>
+                                 <div class="popup__middle">
+                                    <div class="popup__info">
+                                        <p>
+                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu elit non nulla eleifend convallis vel euismod risus. Pellentesque ut elit ut nunc ultricies porta non vitae metus. Cras a nisl consectetur, cursus magna ac, blandit ex. Aliquam id posuere nibh, quis commodo neque. Quisque non lectus a metus tincidunt tempor. Nam sit amet purus vestibulum, aliquet ante in, dictum odio. Mauris a sollicitudin neque, vitae hendrerit ex. Ut rhoncus odio in ante efficitur mollis. Praesent consequat eu mauris sed congue.
+                                        </p>
+                                        <p>
+                                          In varius eros sit amet elit scelerisque faucibus. Curabitur in consequat orci. Praesent lectus ante, facilisis in leo vitae, auctor tincidunt lorem. Pellentesque suscipit dapibus nunc et venenatis. Duis ac elit et lorem interdum commodo sed nec ligula. Donec sollicitudin, ligula eu lacinia commodo, orci quam suscipit nisi, quis pulvinar justo urna et libero. Morbi vel ex a ipsum mollis posuere. Nulla facilisi. Maecenas non leo sit amet lectus tincidunt rhoncus in ut metus. Donec at tincidunt enim. Duis cursus mi ut turpis faucibus, id rhoncus libero elementum. Integer ultrices malesuada magna, id vulputate nisl. Vivamus pretium lectus eget lectus lacinia efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </p>
+                                    </div>
+                                    <div class="item-master-class__image">
+                                       <img src="img\master_class/Kykol.webp" alt="">
+                                    </div>
+                                 </div>
+
+                                 <div class="popup__info">
+                                    <h2 class="popup__header">Контакты:</h2>
+                                    <table cellspacing="0" id="maket">
+                                       <tr> 
+                                        <td class="leftcol"><i class="fa fa-phone" aria-hidden="true"></td>
+                                        <td class="rightcol"><span class="tooltip" data-title="Скопировать"><div class="section-info"> +7 (960) 009-42-41 </div></td>
+                                       </tr>
+
+                                       <tr> 
+                                          <td class="leftcol"><i class="fa fa-phone" aria-hidden="true"></td>
+                                          <td class="rightcol"><span class="tooltip" data-title="Скопировать"><div class="section-info"> +7 (921) 810-29-20 </div></td>
+                                       </tr>
+                                       <tr>
+                                          <td class="leftcol"><i class="fa fa-envelope-o"></i></td>
+                                          <td class="rightcol"><span class="tooltip" data-title="Скопировать"><div class="section-info">evil-corporaty@yandex.ru</div></span></td>
+                                       </tr>
+                                       <tr>
+                                          <td class="leftcol"><i class="fa fa-solid fa-globe"></i></td>
+                                          <td class="rightcol"><a target="_blank" class="item-master-class__link" href="https://vk.com/club10665756">Вконтакте</a></td>
+                                       </tr>
+                                    </table>
+                                 </div>
+                                 <div class="popup__info">
+                                    <h2 class="popup__header">Расписание:</h2>
+                                    <div class="sidenav">
+                                       <table cellspacing="0" id="maket">
+                                       <tr>
+                                          <td class="leftcol"><i class="fa fa-clock-o" aria-hidden="true"></i></td> <td class="rightcol"><button class="dropdown-btn">Время работы&nbsp;<i class="fa fa-caret-down"></i></button>
+                                          
+                                          <div class="dropdown-container">
+                                             <table cellspacing="0"class="timetable">
+                                                   <tr>
+                                                   <td class="leftcol">Пн</td><td  class="rightcol">16:00–20:00</td>
+                                                   </tr>
+                                                   <tr>
+                                                   <td class="leftcol">Вт</td><td class="rightcol">16:00–20:00</td>
+                                                   </tr>
+                                                   <tr>
+                                                   <td class="leftcol">Ср</td><td class="rightcol">16:00–20:00</td>
+                                                   </tr>
+                                                   <tr>
+                                                   <td class="leftcol">Чт</td><td class="rightcol">16:00–20:00</td>
+                                                   </tr>
+                                                   <tr>
+                                                   <td class="leftcol">Пт</td><td class="rightcol">16:00–20:00</td>
+                                                   </tr>
+                                                   <tr>
+                                                   <td class="leftcol">Сб</td><td class="rightcol">11:00–20:00</td>
+                                                   </tr>
+                                                   <tr>
+                                                   <td class="leftcol">Вс</td><td class="rightcol">11:00–20:00</td>
+                                                   </tr>
+                                             </table>
+                                          </div>
+                                       </td>
+                                       </tr>
+                                    </table>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="popup__info">
+                                       <h2 class="popup__header">Адрес:</h2>
+                                       <table>
+                                       <tr>
+                                          <td class="leftcol"><i class="fa fa-bandcamp" aria-hidden="true"></i></td>
+                                          <td class="rightcol"><span class="tooltip" data-title="Скопировать"><div class="section-info">Морской проспект, 30</div></span></td>
+                                       </tr>
+                                       </table>
+                                       <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/10849/severodvinsk/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Северодвинск</a><a href="https://yandex.ru/maps/10849/severodvinsk/house/morskoy_prospekt_30/Z0AYcQBkT0YDQFhufXl1dntmbQ==/?from=api-maps&ll=39.774809%2C64.547552&origin=jsapi_2_1_79&utm_medium=mapframe&utm_source=maps&z=17.2" style="color:#eee;font-size:12px;position:absolute;top:14px;">Морской проспект, 30 на карте Северодвинска — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUnA2RykB" width=100% height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+
+                                 </div>      
+
+
+      
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  
+                  
+                  
+                 </div>
+              </div>
+
+           </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="upper-footer">
+           <div class="center">                  
+              <a class="footer-title" href="./index.html">Мастера Северодвинска</a>
+              <div class="footer-login">
+                 <ul class="footer-list">
+                    <li class="footer-item"><a href="mailto:evil-corporaty@yandex.ru" class="footer-link">evil-corporaty@yandex.ru</a></li>
+                    <li class="footer-item"><a href="tel:79116562686" class="footer-link">+7 (911) 656-26-86</a></li>
+                 </ul>
+
+              </div>
+           </div>
+        </div>
+    </footer>
+<!-- Подключение скриптов -->
+<script src="js/timetable.js"></script>
+<script src="js/copy.js"></script>
+<script src="js/mixitup.min.js"></script>
+<script src="js/main.js" defer></script>
+<script src="js/card.js" defer></script>
+<script>      
+   var mixer = mixitup(".master-class__body");
+</script>
+</body>
+</html>
